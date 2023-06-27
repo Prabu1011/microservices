@@ -28,7 +28,9 @@ app.use('/api/v1', route)
 
 // set port, listen for requests
 const PORT = process.env.PORT || 1004;
-app.listen(PORT, () => {
+const HOST = '0.0.0.0';
+app.listen(PORT, HOST, () => {
     console.log(`Cart Microservice Started...`);
     console.log(`Node Server is running on port ${PORT}.`);
+    console.log('listening on http://${HOST}:${PORT}');
 });
